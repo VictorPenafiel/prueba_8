@@ -1,0 +1,275 @@
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* === CSS VARIABLES === */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --text-color: #333333;
+  --background-color: #f4f4f4;
+  --dark-blue: #1E2D34;
+  --hover-blue: #007bff;
+  --brand-orange: #F29E38;
+  --brand-dark-blue: #0056b3;
+  --host-border-color: #184d5c;
+}
+
+/* === BASE STYLES === */
+body {
+  font-family: 'Cabin', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  color: #646363;
+  font-weight: 318;
+  font-size: 1.0rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
+  color: var(--primary-color);
+}
+
+/* === NAVBAR === */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-blue) !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--hover-blue);
+}
+
+.navbar-toggler {
+  background-color: white !important;
+}
+
+.newendo-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: var(--brand-orange);
+  color: white !important;
+  border-radius: 4px;
+  padding: 0.2rem 0.3rem !important;
+  transition: all 0.3s ease;
+}
+
+.newendo-link:hover {
+  background-color: var(--brand-dark-blue);
+  transform: translateY(-1px);
+}
+
+#telefono {
+  color: #ffffff;
+}
+
+/* === SECTIONS & CARDS === */
+.about {
+  background-color: #ffffff;
+}
+
+.about img, .habitaciones img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.habitaciones img:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feature-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 18px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+/* === CONTACTO SECTION === */
+.contacto {
+  background-color: var(--dark-blue);
+}
+
+.contacto form {
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* === ANFITRION SECTION === */
+#anfitrion {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  padding: 4rem 0;
+}
+
+#anfitrion h2 {
+  color: #333;
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#anfitrion .lead {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+#anfitrion h3 {
+  color: #666;
+  font-weight: 300;
+  font-size: 1.0rem;
+  line-height: 1.5;
+}
+
+.circular-frame {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+  border: 8px solid var(--host-border-color);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.circular-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--primary-color);
+}
+
+footer p {
+  text-align: start;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--secondary-color);
+}
+
+.custom-icon-large i {
+  font-size: 28px;
+}
+
+/* === UTILITIES & ANIMATIONS === */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #2384c4; /* Darken(#3498db, 10%) */
+  border-color: #2384c4;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card, .navbar, footer {
+  animation: fadeIn 1s ease-out;
+}
+
+/* === ACCESSIBILITY === */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+a:focus, button:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* === MEDIA QUERIES === */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+      padding: 0.5rem 0;
+  }
+
+  .newendo-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+      max-width: 29%;
+      text-align: right;
+      height: auto;
+  }
+
+  .navbar-nav {
+    background-color: var(--dark-blue);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  #anfitrion h2 {
+      font-size: 2rem;
+  }
+
+  #anfitrion .lead {
+      font-size: 1.1rem;
+  }
+
+  .circular-frame {
+      width: 200px;
+      height: 200px;
+  }
+}
+
+
